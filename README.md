@@ -60,11 +60,11 @@ docker compose up --build
 - **RabbitMQ UI**:
   - `http://localhost:15672`
 
-## 6. Пример работы с одним и тем же userId (допустим, 11111111-1111-1111-1111-111111111111)
+## 6. Пример работы с одним и тем же userId (например, 11111111-1111-1111-1111-111111111111)
 
 1. Создание аккаунта:
    ```http
-   POST /accounts?userId=<GUID>
+   POST /accounts?userId=11111111-1111-1111-1111-111111111111
    ```
 
 2. Пополнение счёта:
@@ -72,7 +72,7 @@ docker compose up --build
    POST /accounts/deposit
 
    {
-     "userId": "<GUID>",
+     "userId": "11111111-1111-1111-1111-111111111111",
      "amount": 100
    }
    ```
@@ -82,7 +82,7 @@ docker compose up --build
    POST /orders
 
    {
-     "userId": "<GUID>",
+     "userId": "11111111-1111-1111-1111-111111111111",
      "amount": 60
    }
    ```
